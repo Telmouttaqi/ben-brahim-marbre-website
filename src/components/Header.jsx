@@ -13,7 +13,7 @@ export default function Header() {
           <span>f</span>
           <span>◎</span>
           <MessageCircle size={14} />
-          <b>+212 6 61 61 61 61</b>
+          <b>+212</b>
         </span>
       </div>
       <header className="header">

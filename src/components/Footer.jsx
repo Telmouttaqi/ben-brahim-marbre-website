@@ -33,7 +33,7 @@ export default function Footer() {
             <MapPin size={14} /> Zone Industrielle, Route d'El Jadida, Casablanca
           </p>
           <p>
-            <Phone size={14} /> +212 6 61 61 61 61
+            <Phone size={14} /> +212 
           </p>
           <p>
             <Mail size={14} /> contact@benbrahimmarbre.ma
