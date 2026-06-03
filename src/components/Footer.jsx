@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail } from 'lucide-react';
+import logo from '../assets/logo.jpg';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -16,7 +17,7 @@ export default function Footer() {
     <footer>
       <div className="footerGrid">
         <div>
-          <img src="/src/assets/logo.jpg" alt="Ben Brahim Marbre - Logo" />
+          <img src={logo} alt="Ben Brahim Marbre - Logo" />
           <p>Spécialiste du marbre, granit et pierre naturelle au Maroc.</p>
         </div>
         <div>

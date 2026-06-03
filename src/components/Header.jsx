@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import logo from '../assets/logo.jpg';
 
 export default function Header() {
   return (
@@ -17,7 +18,7 @@ export default function Header() {
       </div>
       <header className="header">
         <a className="brand" href="#home">
-          <img src="/src/assets/logo.jpg" alt="Ben Brahim Marbre - Logo" />
+          <img src={logo} alt="Ben Brahim Marbre - Logo" />
         </a>
         <nav>
           <a className="active" href="#home">Accueil</a>

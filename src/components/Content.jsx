@@ -3,37 +3,59 @@ import { Award, BadgeCheck, Truck, MessageCircle } from 'lucide-react';
 import SectionTitle from './SectionTitle';
 import ProductCard from './ProductCard';
 import StatCard from './StatCard';
+import logo from '../assets/logo.jpg';
+import marbreCarrara from '../assets/marbre-carrara.jpg';
+import noirMarquina from '../assets/noir-marquina.jpg';
+import beigeRoyal from '../assets/beige-royal.jpg';
+import grisTundra from '../assets/gris-tundra.jpg';
+import travertin from '../assets/travertin.jpg';
+import graniteNoir from '../assets/granite-noir.jpg';
+import vasqueCarrara from '../assets/vasque-carrara.jpg';
+import vasqueNoirMarquina from '../assets/vasque-noir.jpg';
+import vasqueBeigeRoyal from '../assets/vasque-beige.jpg';
+import vasqueTravertin from '../assets/vasque-travertin.jpg';
+import tableRonde from '../assets/table-ronde.jpg';
+import tableManger from '../assets/table-manger.jpg';
+import tableBasse from '../assets/table-basse.jpg';
+import tableOvale from '../assets/table-ovale.jpg';
+import facades from '../assets/facades.jpg';
+import cuisines from '../assets/cuisines.jpg';
+import escaliers from '../assets/escaliers.jpg';
+import sallesBain from '../assets/salles-bain.jpg';
+import solsInterieurs from '../assets/sols-interieurs.jpg';
+import plansTravail from '../assets/plans-travail.jpg';
+import ctaStones from '../assets/cta-stones.jpg';
 
 const marbles = [
-  ['Marbre Carrara', 'Italie', '650 DH / m²', '/src/assets/marbre-carrara.jpg'],
-  ['Noir Marquina', 'Espagne', '850 DH / m²', '/src/assets/noir-marquina.jpg'],
-  ['Beige Royal', 'Maroc', '550 DH / m²', '/src/assets/beige-royal.jpg'],
-  ['Gris Tundra', 'Norvège', '700 DH / m²', '/src/assets/gris-tundra.jpg'],
-  ['Travertin Classique', 'Turquie', '450 DH / m²', '/src/assets/travertin.jpg'],
-  ['Granite Noir Absolu', 'Afrique du Sud', '600 DH / m²', '/src/assets/granite-noir.jpg']
+  ['Marbre Carrara', 'Italie', '650 DH / m²', marbreCarrara],
+  ['Noir Marquina', 'Espagne', '850 DH / m²', noirMarquina],
+  ['Beige Royal', 'Maroc', '550 DH / m²', beigeRoyal],
+  ['Gris Tundra', 'Norvège', '700 DH / m²', grisTundra],
+  ['Travertin Classique', 'Turquie', '450 DH / m²', travertin],
+  ['Granite Noir Absolu', 'Afrique du Sud', '600 DH / m²', graniteNoir]
 ];
 
 const vasques = [
-  ['Vasque Carrara', 'À partir de 1 200 DH', '/src/assets/vasque-carrara.jpg'],
-  ['Vasque Noir Marquina', 'À partir de 1 500 DH', '/src/assets/vasque-noir.jpg'],
-  ['Vasque Beige Royal', 'À partir de 1 100 DH', '/src/assets/vasque-beige.jpg'],
-  ['Vasque Travertin', 'À partir de 950 DH', '/src/assets/vasque-travertin.jpg']
+  ['Vasque Carrara', 'À partir de 1 200 DH', vasqueCarrara],
+  ['Vasque Noir Marquina', 'À partir de 1 500 DH', vasqueNoirMarquina],
+  ['Vasque Beige Royal', 'À partir de 1 100 DH', vasqueBeigeRoyal],
+  ['Vasque Travertin', 'À partir de 950 DH', vasqueTravertin]
 ];
 
 const tables = [
-  ['Table Ronde Marbre', 'À partir de 4 500 DH', '/src/assets/table-ronde.jpg'],
-  ['Table À Manger Luxe', 'À partir de 7 500 DH', '/src/assets/table-manger.jpg'],
-  ['Table Basse Marbre', 'À partir de 2 800 DH', '/src/assets/table-basse.jpg'],
-  ['Table Ovale Marbre', 'À partir de 6 200 DH', '/src/assets/table-ovale.jpg']
+  ['Table Ronde Marbre', 'À partir de 4 500 DH', tableRonde],
+  ['Table À Manger Luxe', 'À partir de 7 500 DH', tableManger],
+  ['Table Basse Marbre', 'À partir de 2 800 DH', tableBasse],
+  ['Table Ovale Marbre', 'À partir de 6 200 DH', tableOvale]
 ];
 
 const realisations = [
-  ['Façades & Extérieurs', '/src/assets/facades.jpg'],
-  ['Cuisines en Marbre', '/src/assets/cuisines.jpg'],
-  ['Escaliers', '/src/assets/escaliers.jpg'],
-  ['Salles de Bain', '/src/assets/salles-bain.jpg'],
-  ['Sols & Intérieurs', '/src/assets/sols-interieurs.jpg'],
-  ['Plans de Travail', '/src/assets/plans-travail.jpg']
+  ['Façades & Extérieurs', facades],
+  ['Cuisines en Marbre', cuisines],
+  ['Escaliers', escaliers],
+  ['Salles de Bain', sallesBain],
+  ['Sols & Intérieurs', solsInterieurs],
+  ['Plans de Travail', plansTravail]
 ];
 
 export default function Content() {
@@ -101,7 +123,7 @@ export default function Content() {
 
       {/* CTA Section */}
       <section id="contact" className="cta">
-        <img src="/src/assets/cta-stones.jpg" alt="Samples de marbre" />
+        <img src={ctaStones} alt="Samples de marbre" />
         <div>
           <h2>Un projet en tête ?</h2>
           <p>Demandez votre devis gratuit dès maintenant.</p>
