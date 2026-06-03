@@ -1,0 +1,857 @@
+/* ============================================
+   ROOT VARIABLES & DESIGN SYSTEM
+   ============================================ */
+:root {
+  --red: #e21b23;
+  --dark: #111;
+  --soft: #f5f5f5;
+  --text: #202020;
+  --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --transition: 0.3s ease;
+}
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Arial', sans-serif;
+  color: var(--text);
+  background: #fff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition);
+}
+
+/* ============================================
+   TOP BAR
+   ============================================ */
+.topbar {
+  height: 40px;
+  background: var(--dark);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  font-size: 13px;
+}
+
+.topbar span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topbar .social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar .social b {
+  background: var(--red);
+  padding: 8px 18px;
+  font-weight: 600;
+  border-radius: 3px;
+  transition: background var(--transition);
+}
+
+.topbar .social b:hover {
+  background: #c91720;
+}
+
+/* ============================================
+   HEADER & NAVIGATION
+   ============================================ */
+.header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2rem;
+  background: #fff;
+  box-shadow: var(--shadow-light);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand img {
+  width: 220px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.header nav {
+  display: flex;
+  gap: 2rem;
+  margin-left: auto;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.header nav a {
+  padding: 27px 0;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition);
+  position: relative;
+}
+
+.header nav a:hover,
+.header nav .active {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+
+.quote {
+  background: var(--red);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 3px;
+  padding: 12px 22px;
+  display: inline-block;
+  white-space: nowrap;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.quote:hover {
+  background: #c91720;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+  height: 520px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%),
+    url('/src/assets/hero.jpg') center/cover no-repeat;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 3rem 2rem;
+}
+
+.heroText {
+  max-width: 700px;
+  z-index: 2;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin: 0 0 20px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+.hero h1 span {
+  color: var(--red);
+  display: block;
+  margin-top: 0.2em;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0 0 28px;
+  opacity: 0.95;
+}
+
+.hero > div:first-child > div {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background: var(--red);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 3px;
+  padding: 14px 28px;
+  display: inline-block;
+  border: 2px solid var(--red);
+  transition: all var(--transition);
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: #c91720;
+  border-color: #c91720;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.btn.secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn.secondary:hover {
+  background: white;
+  color: var(--red);
+  border-color: white;
+}
+
+.heroFeatures {
+  position: absolute;
+  right: 3rem;
+  top: 160px;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 2rem;
+  width: 300px;
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.feature:last-child {
+  margin-bottom: 0;
+}
+
+.feature svg {
+  color: var(--red);
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.feature b {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.feature small {
+  display: block;
+  font-size: 13px;
+  color: #d0d0d0;
+  line-height: 1.5;
+}
+
+/* ============================================
+   SECTION STYLES
+   ============================================ */
+main {
+  background: #fff;
+}
+
+.section {
+  padding: 4rem 2rem;
+  background: #fff;
+}
+
+.section:nth-child(odd) {
+  background: var(--soft);
+}
+
+.sectionTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+.sectionTitle > div {
+  flex: 1;
+}
+
+.sectionTitle h2 {
+  font-size: 42px;
+  font-weight: 900;
+  margin: 0 0 0.5rem;
+  line-height: 1.1;
+}
+
+.sectionTitle h2 span {
+  color: var(--red);
+}
+
+.sectionTitle p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* ============================================
+   GRID LAYOUT
+   ============================================ */
+.grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.grid.six {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.grid.four {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* ============================================
+   PRODUCT CARDS
+   ============================================ */
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: var(--shadow-light);
+  border: 1px solid #f0f0f0;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  background: var(--soft);
+  transition: transform var(--transition);
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.card p {
+  font-size: 14px;
+  color: #666;
+  margin: 0 1rem 0.5rem;
+  font-weight: 500;
+}
+
+.card strong {
+  font-size: 16px;
+  color: var(--red);
+  font-weight: 700;
+  margin: 0.5rem 1rem 1rem;
+  display: block;
+}
+
+/* ============================================
+   SPLIT SECTION
+   ============================================ */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.split > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================
+   PROJECTS GRID
+   ============================================ */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.project {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 250px;
+  cursor: pointer;
+}
+
+.project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition);
+}
+
+.project b {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  padding: 2rem 1rem 1rem;
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+}
+
+.project:hover img {
+  transform: scale(1.08);
+}
+
+/* ============================================
+   STATS SECTION
+   ============================================ */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: var(--dark);
+  color: white;
+}
+
+.stat {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat svg {
+  color: var(--red);
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
+}
+
+.stat b {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.stat span {
+  font-size: 14px;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.cta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  background: white;
+  align-items: center;
+}
+
+.cta img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow-medium);
+  display: block;
+}
+
+.cta > div:nth-child(2) {
+  padding: 0 1rem;
+}
+
+.cta h2 {
+  font-size: 36px;
+  font-weight: 900;
+  margin: 0 0 1rem;
+  color: var(--text);
+}
+
+.cta p {
+  font-size: 18px;
+  margin: 0 0 1.5rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.cta ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.cta li {
+  padding: 10px 0;
+  padding-left: 28px;
+  position: relative;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.cta li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-weight: 700;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.whatsapp {
+  background: #25d366;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 3px;
+  padding: 14px 28px;
+  display: inline-block;
+  border: 2px solid #25d366;
+  transition: all var(--transition);
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.whatsapp:hover {
+  background: #1fa952;
+  border-color: #1fa952;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+  background: var(--dark);
+  color: white;
+  padding: 4rem 2rem 2rem;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footerGrid > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerGrid img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.footerGrid p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #aaa;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.footerGrid h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footerGrid a {
+  font-size: 14px;
+  color: #aaa;
+  transition: color var(--transition);
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.footerGrid a:hover {
+  color: var(--red);
+}
+
+.footerGrid input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  border-radius: 3px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  transition: all var(--transition);
+}
+
+.footerGrid input:focus {
+  outline: none;
+  border-color: var(--red);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footerGrid input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footerGrid button {
+  width: 100%;
+  padding: 12px;
+  background: var(--red);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all var(--transition);
+}
+
+.footerGrid button:hover {
+  background: #c91720;
+  transform: translateY(-2px);
+}
+
+.copyright {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1024px) {
+  .hero {
+    height: 450px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .heroFeatures {
+    position: static;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .split {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionTitle {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    padding: 0 1rem;
+    font-size: 12px;
+    gap: 1rem;
+  }
+
+  .topbar span:first-child {
+    display: none;
+  }
+
+  .header {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+
+  .brand img {
+    width: 160px;
+  }
+
+  .header nav {
+    display: none;
+  }
+
+  .quote {
+    display: none;
+  }
+
+  .hero {
+    height: 350px;
+    padding: 2rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .heroFeatures {
+    display: none;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .sectionTitle h2 {
+    font-size: 28px;
+  }
+
+  .sectionTitle p {
+    font-size: 14px;
+  }
+
+  .grid.six,
+  .grid.four {
+    grid-template-columns: 1fr;
+  }
+
+  .cta h2 {
+    font-size: 24px;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+  }
+
+  .ctaButtons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero > div:first-child > div {
+    flex-direction: column;
+  }
+
+  .btn,
+  .whatsapp {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section {
+    padding: 1.5rem 1rem;
+  }
+
+  .sectionTitle h2 {
+    font-size: 22px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cta ul {
+    margin: 1rem 0;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
