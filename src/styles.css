@@ -78,7 +78,7 @@ a {
    HEADER & NAVIGATION
    ============================================ */
 .header {
-  height: 70px;
+  height: 90px;
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -90,9 +90,17 @@ a {
   z-index: 100;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex-shrink: 0;
+}
+
 .brand img {
-  width: 220px;
+  width: 180px;
   height: auto;
+  max-height: 80px;
   display: block;
   object-fit: contain;
 }
@@ -146,7 +154,7 @@ a {
 .hero {
   height: 520px;
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%),
-    url('/src/assets/hero.jpg') center/cover no-repeat;
+    url('/assets/heroo.jpg') center/cover no-repeat;
   position: relative;
   color: white;
   display: flex;
@@ -688,6 +696,30 @@ footer {
   transform: translateY(-2px);
 }
 
+.socialLinks {
+  display: flex;
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(226, 27, 35, 0.15);
+  color: var(--red);
+  border-radius: 50%;
+  transition: all var(--transition);
+}
+
+.socialLinks a:hover {
+  background: var(--red);
+  color: white;
+  transform: translateY(-2px);
+}
+
 .copyright {
   text-align: center;
   font-size: 13px;
@@ -740,12 +772,14 @@ footer {
   }
 
   .header {
+    height: 80px;
     padding: 0 1rem;
     gap: 1rem;
   }
 
   .brand img {
-    width: 160px;
+    width: 140px;
+    max-height: 70px;
   }
 
   .header nav {

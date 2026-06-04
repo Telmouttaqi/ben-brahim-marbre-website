@@ -137,7 +137,7 @@ export default function Content() {
           <a className="btn" href="mailto:contact@benbrahimmarbre.ma">
             Demander un devis
           </a>
-          <a className="whatsapp" href="https://wa.me/212661616161">
+          <a className="whatsapp" href="https://wa.me/212660865052" target="_blank" rel="noopener noreferrer">
             Parler sur WhatsApp
           </a>
         </div>

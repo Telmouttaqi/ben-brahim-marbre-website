@@ -7,13 +7,22 @@ export default function Header() {
     <>
       <div className="topbar">
         <span>
-          <MapPin size={15} /> Showroom : Zone Industrielle, Route d'El Jadida, Casablanca
+          <MapPin size={15} />
+          <a href="https://www.google.com/maps?q=33.508917,-7.618278" target="_blank" rel="noopener noreferrer">
+            Showroom : Zone Industrielle, Route d'El Jadida, Casablanca
+          </a>
         </span>
         <span className="social">
           <span>f</span>
           <span>◎</span>
-          <MessageCircle size={14} />
-          <b>+212</b>
+          <a href="https://wa.me/212660865052" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+            <MessageCircle size={14} />
+            <b>WhatsApp</b>
+          </a>
+          <a href="tel:+212660865052" title="Appeler">
+            <Phone size={14} />
+            <b>+212660865052</b>
+          </a>
         </span>
       </div>
       <header className="header">
