@@ -44,46 +44,46 @@ import plansTravail from '../assets/plans-travail.jpg';
 import ctaStones from '../assets/cta-stones.jpg';
 
 const marbles = [
-  ['Marbre Carrare', 'Italie', '650 DH / m²', carrare],
-  ['Gris Benslimane', 'Maroc', '620 DH / m²', grisBenslimane],
-  ['Gris Taza', 'Maroc', '680 DH / m²', grisTaza],
-  ['Gris Tundra', 'Norvège', '720 DH / m²', grisTundra],
-  ['Ibiza', 'Espagne', '750 DH / m²', ibiza],
-  ['Marrion Imperial', 'Italie', '700 DH / m²', marrionImperial],
-  ['Perlatino', 'Italie', '780 DH / m²', perlatino],
-  ['Selvia', 'Turquie', '760 DH / m²', selvia],
-  ['Travertin', 'Turquie', '450 DH / m²', travertin],
-  ['Vert Guatemala', 'Guatemala', '800 DH / m²', vertGuatemala]
+  ['Marbre Carrare', 'Italie', carrare],
+  ['Gris Benslimane', 'Maroc', grisBenslimane],
+  ['Gris Taza', 'Maroc', grisTaza],
+  ['Gris Tundra', 'Norvège', grisTundra],
+  ['Ibiza', 'Espagne', ibiza],
+  ['Marrion Imperial', 'Italie', marrionImperial],
+  ['Perlatino', 'Italie', perlatino],
+  ['Selvia', 'Turquie', selvia],
+  ['Travertin', 'Turquie', travertin],
+  ['Vert Guatemala', 'Guatemala', vertGuatemala]
 ];
 
 const granites = [
-  ['Granite Absolu', 'Afrique du Sud', '720 DH / m²', absolu],
-  ['Granite Angola Flammé', 'Angola', '680 DH / m²', angolaFlamme],
-  ['Granite Angola Poli', 'Angola', '690 DH / m²', angolaPoli],
-  ['Granite Baltic Brown', 'Finlande', '750 DH / m²', balticBrown],
-  ['Granite Crema Julia', 'Italie', '770 DH / m²', cremaJulia],
-  ['Granite Galaxy', 'Inde', '820 DH / m²', galaxy],
-  ['Granite Grand Perla', 'Turquie', '700 DH / m²', grandPerla],
-  ['Granite Kashmir White', 'Inde', '830 DH / m²', kashmirWhite],
-  ['Granite Labrador Blue', 'Brésil', '860 DH / m²', labradorBlue],
-  ['Granite Labrador Gris', 'Brésil', '820 DH / m²', labradorGris],
-  ['Granite New Halayeb', 'Égypte', '780 DH / m²', newHalayeb],
-  ['Granite Rosavel', 'Portugal', '790 DH / m²', rosavel],
-  ['Granite Rose Porrino', 'Italie', '810 DH / m²', rosePorrino]
+  ['Granite Absolu', 'Afrique du Sud', absolu],
+  ['Granite Angola Flammé', 'Angola', angolaFlamme],
+  ['Granite Angola Poli', 'Angola', angolaPoli],
+  ['Granite Baltic Brown', 'Finlande', balticBrown],
+  ['Granite Crema Julia', 'Italie', cremaJulia],
+  ['Granite Galaxy', 'Inde', galaxy],
+  ['Granite Grand Perla', 'Turquie', grandPerla],
+  ['Granite Kashmir White', 'Inde', kashmirWhite],
+  ['Granite Labrador Blue', 'Brésil', labradorBlue],
+  ['Granite Labrador Gris', 'Brésil', labradorGris],
+  ['Granite New Halayeb', 'Égypte', newHalayeb],
+  ['Granite Rosavel', 'Portugal', rosavel],
+  ['Granite Rose Porrino', 'Italie', rosePorrino]
 ];
 
 const vasques = [
-  ['Vasque Carrara', 'À partir de 1 200 DH', vasqueCarrara],
-  ['Vasque Noir Marquina', 'À partir de 1 500 DH', vasqueNoirMarquina],
-  ['Vasque Beige Royal', 'À partir de 1 100 DH', vasqueBeigeRoyal],
-  ['Vasque Travertin', 'À partir de 950 DH', vasqueTravertin]
+  ['Vasque Carrara', vasqueCarrara],
+  ['Vasque Noir Marquina', vasqueNoirMarquina],
+  ['Vasque Beige Royal', vasqueBeigeRoyal],
+  ['Vasque Travertin', vasqueTravertin]
 ];
 
 const tables = [
-  ['Table Ronde Marbre', 'À partir de 4 500 DH', tableRonde],
-  ['Table À Manger Luxe', 'À partir de 7 500 DH', tableManger],
-  ['Table Basse Marbre', 'À partir de 2 800 DH', tableBasse],
-  ['Table Ovale Marbre', 'À partir de 6 200 DH', tableOvale]
+  ['Table Ronde Marbre', tableRonde],
+  ['Table À Manger Luxe', tableManger],
+  ['Table Basse Marbre', tableBasse],
+  ['Table Ovale Marbre', tableOvale]
 ];
 
 const realisations = [
