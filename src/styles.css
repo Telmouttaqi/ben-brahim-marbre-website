@@ -37,44 +37,6 @@ a {
 }
 
 /* ============================================
-   TOP BAR
-   ============================================ */
-.topbar {
-  height: 40px;
-  background: var(--dark);
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
-  font-size: 13px;
-}
-
-.topbar span {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.topbar .social {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.topbar .social b {
-  background: var(--red);
-  padding: 8px 18px;
-  font-weight: 600;
-  border-radius: 3px;
-  transition: background var(--transition);
-}
-
-.topbar .social b:hover {
-  background: #c91720;
-}
-
-/* ============================================
    HEADER & NAVIGATION
    ============================================ */
 .header {
@@ -88,6 +50,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
+  justify-content: space-between;
 }
 
 .brand {
@@ -108,11 +71,12 @@ a {
 .header nav {
   display: flex;
   gap: 2rem;
-  margin-left: auto;
+  margin: 0;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.5px;
+  flex: 1;
 }
 
 .header nav a {
@@ -122,10 +86,15 @@ a {
   position: relative;
 }
 
-.header nav a:hover,
-.header nav .active {
+.header nav a:hover {
   color: var(--red);
   border-bottom-color: var(--red);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .quote {
@@ -146,6 +115,20 @@ a {
   background: #c91720;
   transform: translateY(-2px);
   box-shadow: var(--shadow-medium);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  padding: 8px;
+  transition: color var(--transition);
+}
+
+.hamburger:hover {
+  color: var(--red);
 }
 
 /* ============================================
@@ -761,29 +744,61 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .topbar {
-    padding: 0 1rem;
-    font-size: 12px;
-    gap: 1rem;
-  }
-
-  .topbar span:first-child {
-    display: none;
-  }
-
   .header {
-    height: 80px;
+    height: 70px;
     padding: 0 1rem;
     gap: 1rem;
   }
 
   .brand img {
     width: 140px;
-    max-height: 70px;
+    max-height: 60px;
   }
 
   .header nav {
     display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+    box-shadow: var(--shadow-medium);
+    margin: 0;
+    z-index: 99;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .header nav.active {
+    display: flex;
+  }
+
+  .header nav a {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+    border-bottom-color: transparent;
+    margin: 0;
+  }
+
+  .header nav a:hover {
+    background: var(--soft);
+    border-bottom-color: var(--red);
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 
   .quote {
