@@ -22,7 +22,7 @@ export default function Header() {
         <a href="#contact" onClick={closeMenu}>Contact</a>
       </nav>
       <div className="header-actions">
-        <a className="quote" href="#contact" onClick={closeMenu}>Demander un devis</a>
+        <a className="quote" href="https://wa.me/212660865052" target="_blank" rel="noopener noreferrer">Demander un devis</a>
         <button
           className="hamburger"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

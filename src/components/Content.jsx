@@ -182,7 +182,7 @@ export default function Content() {
           </ul>
         </div>
         <div className="ctaButtons">
-          <a className="btn" href="mailto:contact@benbrahimmarbre.ma">
+          <a className="btn" href="https://wa.me/212660865052" target="_blank" rel="noopener noreferrer">
             Demander un devis
           </a>
           <a className="whatsapp" href="https://wa.me/212660865052" target="_blank" rel="noopener noreferrer">
