@@ -32,6 +32,7 @@ export default function Footer() {
           <h4>Liens rapides</h4>
           <a href="#home">Accueil</a>
           <a href="#marbres">Marbres</a>
+          <a href="#granite">Granite</a>
           <a href="#vasques">Vasques</a>
           <a href="#tables">Tables</a>
         </div>
@@ -43,7 +44,7 @@ export default function Footer() {
               Zone Industrielle, Route d'El Jadida, Casablanca
             </a>
           </p>
-          <p className="coordinates">33°30'32.1"N 7°37'05.8"W</p>
+          {/* <p className="coordinates"></p> */}
           <p>
             <MessageCircle size={14} />
             <a href="https://wa.me/212660865052" target="_blank" rel="noopener noreferrer">WhatsApp : +212660865052</a>
