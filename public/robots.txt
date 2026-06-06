@@ -1,0 +1,20 @@
+# robots.txt for Ben Brahim Marbre
+User-agent: *
+Allow: /
+Disallow: /dist/
+Disallow: /node_modules/
+Disallow: *.map
+Disallow: /src/
+
+Sitemap: https://benbrahimmarbre.ma/sitemap.xml
+
+# Google Search Console
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Specific crawl delay
+Crawl-delay: 2
