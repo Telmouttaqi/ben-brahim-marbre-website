@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, MessageCircle, Facebook, Instagram } from 'lucide-react';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo/logo.jpeg';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
