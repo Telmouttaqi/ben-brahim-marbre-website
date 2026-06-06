@@ -1,15 +1,15 @@
 import React from 'react';
 
 export default function ProductCard({ item }) {
-  const [name, location, price, image] = item;
-  const imageUrl = image || price;
+  const [name, locationOrImage, imageOrUndefined] = item;
+  const image = imageOrUndefined || locationOrImage;
+  const location = typeof locationOrImage === 'string' ? locationOrImage : null;
 
   return (
     <article className="card">
-      <img src={imageUrl} alt={name} loading="lazy" />
+      <img src={image} alt={name} loading="lazy" />
       <h3>{name}</h3>
       {location && <p>{location}</p>}
-      <strong>{price || location}</strong>
     </article>
   );
 }
