@@ -3,13 +3,30 @@ import { Award, BadgeCheck, Truck, MessageCircle } from 'lucide-react';
 import SectionTitle from './SectionTitle';
 import ProductCard from './ProductCard';
 import StatCard from './StatCard';
-import logo from '../assets/logo.jpg';
-import marbreCarrara from '../assets/marbre-carrara.jpg';
-import noirMarquina from '../assets/noir-marquina.jpg';
-import beigeRoyal from '../assets/beige-royal.jpg';
-import grisTundra from '../assets/gris-tundra.jpg';
-import travertin from '../assets/travertin.jpg';
+import carrare from '../assets/marbres/CARRARE.jpeg';
+import grisBenslimane from '../assets/marbres/GRIS BENSLIMANE.jpeg';
+import grisTaza from '../assets/marbres/GRIS TAZA.jpeg';
+import grisTundra from '../assets/marbres/GRIS TUNDRA.jpeg';
+import ibiza from '../assets/marbres/IBIZA.jpeg';
+import marrionImperial from '../assets/marbres/MARRION_IMPERIAL.jpeg';
+import perlatino from '../assets/marbres/PERLATINO.jpeg';
+import selvia from '../assets/marbres/SELVIA.jpeg';
+import travertin from '../assets/marbres/TRAVERTIN.jpeg';
+import vertGuatemala from '../assets/marbres/VERT GUATEMALA.jpeg';
 import graniteNoir from '../assets/granite-noir.jpg';
+import absolu from '../assets/Granite/ABSOLU.jpeg';
+import angolaFlamme from '../assets/Granite/ANGOLA_FLAMME.jpeg';
+import angolaPoli from '../assets/Granite/ANGOLA_POLI.jpeg';
+import balticBrown from '../assets/Granite/BALTIC_BROWN.jpeg';
+import cremaJulia from '../assets/Granite/CREMA_JULIA.jpeg';
+import galaxy from '../assets/Granite/GALAXY.jpeg';
+import grandPerla from '../assets/Granite/GRAND_PERLA.jpeg';
+import kashmirWhite from '../assets/Granite/KASHMIR_WHITE.jpeg';
+import labradorBlue from '../assets/Granite/LABRADOR_BLUE.jpeg';
+import labradorGris from '../assets/Granite/LABRADOR_GRIS.jpeg';
+import newHalayeb from '../assets/Granite/NEW_HALAYEB.jpeg';
+import rosavel from '../assets/Granite/ROSAVEL.jpeg';
+import rosePorrino from '../assets/Granite/ROSE_PORRINO.jpeg';
 import vasqueCarrara from '../assets/vasque-carrara.jpg';
 import vasqueNoirMarquina from '../assets/vasque-noir.jpg';
 import vasqueBeigeRoyal from '../assets/vasque-beige.jpg';
@@ -27,12 +44,32 @@ import plansTravail from '../assets/plans-travail.jpg';
 import ctaStones from '../assets/cta-stones.jpg';
 
 const marbles = [
-  ['Marbre Carrara', 'Italie', '650 DH / m²', marbreCarrara],
-  ['Noir Marquina', 'Espagne', '850 DH / m²', noirMarquina],
-  ['Beige Royal', 'Maroc', '550 DH / m²', beigeRoyal],
-  ['Gris Tundra', 'Norvège', '700 DH / m²', grisTundra],
-  ['Travertin Classique', 'Turquie', '450 DH / m²', travertin],
-  ['Granite Noir Absolu', 'Afrique du Sud', '600 DH / m²', graniteNoir]
+  ['Marbre Carrare', 'Italie', '650 DH / m²', carrare],
+  ['Gris Benslimane', 'Maroc', '620 DH / m²', grisBenslimane],
+  ['Gris Taza', 'Maroc', '680 DH / m²', grisTaza],
+  ['Gris Tundra', 'Norvège', '720 DH / m²', grisTundra],
+  ['Ibiza', 'Espagne', '750 DH / m²', ibiza],
+  ['Marrion Imperial', 'Italie', '700 DH / m²', marrionImperial],
+  ['Perlatino', 'Italie', '780 DH / m²', perlatino],
+  ['Selvia', 'Turquie', '760 DH / m²', selvia],
+  ['Travertin', 'Turquie', '450 DH / m²', travertin],
+  ['Vert Guatemala', 'Guatemala', '800 DH / m²', vertGuatemala]
+];
+
+const granites = [
+  ['Granite Absolu', 'Afrique du Sud', '720 DH / m²', absolu],
+  ['Granite Angola Flammé', 'Angola', '680 DH / m²', angolaFlamme],
+  ['Granite Angola Poli', 'Angola', '690 DH / m²', angolaPoli],
+  ['Granite Baltic Brown', 'Finlande', '750 DH / m²', balticBrown],
+  ['Granite Crema Julia', 'Italie', '770 DH / m²', cremaJulia],
+  ['Granite Galaxy', 'Inde', '820 DH / m²', galaxy],
+  ['Granite Grand Perla', 'Turquie', '700 DH / m²', grandPerla],
+  ['Granite Kashmir White', 'Inde', '830 DH / m²', kashmirWhite],
+  ['Granite Labrador Blue', 'Brésil', '860 DH / m²', labradorBlue],
+  ['Granite Labrador Gris', 'Brésil', '820 DH / m²', labradorGris],
+  ['Granite New Halayeb', 'Égypte', '780 DH / m²', newHalayeb],
+  ['Granite Rosavel', 'Portugal', '790 DH / m²', rosavel],
+  ['Granite Rose Porrino', 'Italie', '810 DH / m²', rosePorrino]
 ];
 
 const vasques = [
@@ -69,6 +106,17 @@ export default function Content() {
         <div className="grid six">
           {marbles.map((marble, index) => (
             <ProductCard item={marble} key={index} />
+          ))}
+        </div>
+      </section>
+
+      <section id="granite" className="section">
+        <SectionTitle sub="Explorez notre gamme de granits robustes et élégants">
+          Catalogue des <span>Granites</span>
+        </SectionTitle>
+        <div className="grid six">
+          {granites.map((granite, index) => (
+            <ProductCard item={granite} key={index} />
           ))}
         </div>
       </section>

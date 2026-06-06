@@ -32,6 +32,7 @@ export default function Header() {
         <nav>
           <a className="active" href="#home">Accueil</a>
           <a href="#marbres">Marbres</a>
+          <a href="#granite">Granite</a>
           <a href="#vasques">Vasques</a>
           <a href="#tables">Tables</a>
           <a href="#realisations">Réalisations</a>
