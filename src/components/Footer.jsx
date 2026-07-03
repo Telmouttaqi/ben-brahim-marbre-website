@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, MessageCircle, Facebook, Instagram } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/logo/logo.jpeg';
 
-export default function Footer() {
+export default function Footer({ setPage }) {
   const [email, setEmail] = useState('');
 
   const handleNewsletterSubmit = (e) => {
@@ -30,11 +31,11 @@ export default function Footer() {
         </div>
         <div>
           <h4>Liens rapides</h4>
-          <a href="#home">Accueil</a>
-          <a href="#marbres">Marbres</a>
-          <a href="#granite">Granite</a>
-          <a href="#vasques">Vasques</a>
-          <a href="#tables">Tables</a>
+          <Link to="/">Accueil</Link>
+          <Link to="/category/marbles">Marbres</Link>
+          <Link to="/category/granites">Granites</Link>
+          <Link to="/category/vasques">Vasques</Link>
+          <Link to="/category/tables">Tables</Link>
         </div>
         <div>
           <h4>Contactez-nous</h4>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/logo/logo.jpeg';
 
 export default function Header() {
@@ -9,20 +10,20 @@ export default function Header() {
 
   return (
     <header className="header">
-      <a className="brand" href="#home" onClick={closeMenu}>
+      <Link className="brand" to="/" onClick={closeMenu}>
         <img src={logo} alt="Ben Brahim Marbre - Logo" />
-      </a>
+      </Link>
       <nav className={`nav ${mobileMenuOpen ? 'active' : ''}`}>
-        <a href="#home" onClick={closeMenu}>Accueil</a>
-        <a href="#marbres" onClick={closeMenu}>Marbres</a>
-        <a href="#granite" onClick={closeMenu}>Granite</a>
-        <a href="#vasques" onClick={closeMenu}>Vasques</a>
-        <a href="#tables" onClick={closeMenu}>Tables</a>
-        <a href="#realisations" onClick={closeMenu}>Réalisations</a>
+        <Link to="/" onClick={closeMenu}>Accueil</Link>
+        <Link to="/category/marbles" onClick={closeMenu}>Marbres</Link>
+        <Link to="/category/granites" onClick={closeMenu}>Granites</Link>
+        <Link to="/category/vasques" onClick={closeMenu}>Vasques</Link>
+        <Link to="/category/tables" onClick={closeMenu}>Tables</Link>
+        <Link to="/category/tahajart" onClick={closeMenu}>Tahajart</Link>
         <a href="#contact" onClick={closeMenu}>Contact</a>
       </nav>
       <div className="header-actions">
-        <a className="quote" href="https://wa.me/212660865052" target="_blank" rel="noopener noreferrer">Demander un devis</a>
+        <a className="quote" href="#contact" onClick={closeMenu}>Demander un devis</a>
         <button
           className="hamburger"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

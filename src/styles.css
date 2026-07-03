@@ -275,14 +275,9 @@ main {
   background: #fff;
 }
 
-section {
-  scroll-margin-top: 90px;
-}
-
 .section {
   padding: 4rem 2rem;
   background: #fff;
-  scroll-margin-top: 90px;
 }
 
 .section:nth-child(odd) {

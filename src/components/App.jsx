@@ -1,17 +1,16 @@
 import React from 'react';
-import Header from './Header';
-import Hero from './Hero';
-import Content from './Content';
-import Footer from './Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from '../pages/HomePage';
+import CategoryPage from '../pages/CategoryPage';
 import '../styles.css';
 
 export default function App() {
   return (
-    <>
-      <Header />
-      <Hero />
-      <Content />
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/category/:category" element={<CategoryPage />} />
+      </Routes>
+    </Router>
   );
 }
